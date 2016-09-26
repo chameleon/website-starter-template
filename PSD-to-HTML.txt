@@ -1,0 +1,55 @@
+PSD to HTML
+
+PRE- Have HTML template ready (with css, js, jQuery, bootstrap...)
+
+1)  cut out the images that can’t be re-created using standard CSS exporting tools.
+
+2) Write the HTML for each section:
+
+3) HEADER -logo and any main menu items that lay horizontally at the top of the page. and line separating it from content.
+
+4) HERO section
+
+5) Slideshow
+
+6) CONTENT - text, images, buttons, and basically any components.  (Columns, grids.)
+
+7) FOOTER - contact information, some links to content such as a blog or about page, and any social media links for the business.
+
+8) HTML validator:  https://validator.w3.org/
+
+9) CSS  - add some styling with CSS
+
+10) Set up CSS comiler?  SASS, LESS, and Stylus
+
+11) BOOTSTRAP / LAYOUT - Bootstrap. It lets you quickly set up a layout template that’s fully responsive without any effort on your part.
+
+12) JavaScript / jQuery - Add Interaction.
+
+13) JA Frameworks -  vue.js and react.js. These two frameworks make it easier to hook HTML elements with JavaScript data and functions.
+- AngularJs. This framework lets you use MVC styles to dynamically set data within your HTML layouts. There are more and more JavaScript MV* style frameworks out there
+
+14)  BUILD -  Grunt/LESS, etc - or Gulp/SCSS.
+
+15)  BrowserSync - https://www.browsersync.io/  New CSS and JS are automatically injected into the refreshed page   -  Use the following command line to install the tool.  npm install browser-sync –g
+  After you’ve installed it, you need to start it to hook it to your site’s browser events. Type the following command into your command line (make sure the command line is pointing to the directory that contains your project):
+
+browser-sync start --server --files "*.html, css/*.css"
+
+The above statement starts BrowserSync on your server for all files with the HTML and CSS extensions. You can also specify a server location using an IP address and a port number.
+
+16) TEST - Sites such as MobileTest.me and Google’s Developer Tools give you ways to automate testing.
+
+17) Emulators & actual device testing
+
+Google has a Fetch as Google tool that helps you review and visualize the way the site looks to bots.
+
+Test the load time for the site pages.  Google, Yslow, Firebug
+
+
+
+
+
+
+
+
