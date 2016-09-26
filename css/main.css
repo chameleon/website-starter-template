@@ -266,6 +266,8 @@ label, input[type=button], input[type=submit], button { cursor: pointer; }
 
 .page-container{
     /* try not to use a page container for layout. ok for styling*/
+    width: 800px;
+    margin: 0 auto
 }
 
 /*  HEADER  */
@@ -414,6 +416,14 @@ label, input[type=button], input[type=submit], button { cursor: pointer; }
 .footer{
 
 }
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:120px;
+   width:100%;
+   background:#999;
+}
 .footer__title{
 
 }
@@ -512,13 +522,26 @@ your content to handle all touch input (touches that begin on
     display:block;
     margin:0 auto;
 }
-/* */ Responsive video
-.responsive-video{
+/*  Responsive video */
+.responsive-video {
     max-width:100%;
 }
 
+.center-background-img {
+    background:url(logo.png) center center no-repeat;
+}
+.center-img {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   //width: 500px;
+   //height: 500px;
+   margin-top: -250px; /* Half the height */
+   margin-left: -250px; /* Half the width */
+}
+
 /* responsive- vertically-centered  */
-.vertically-centered{
+.vertically-centered {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -536,13 +559,217 @@ Flex VERTICAL CENTER it:
 }
 */
 
+
 /* ==========================================================================
-   SCROLL SNAPPING POINTS - New!!  Cool!
-   https://www.sitepoint.com/intuitive-scrolling-interfaces-with-css-scroll-snap-points/
-
-
-
+   MOMENTUM SCROLLING
    ========================================================================== */
+  * {overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;}
+/* ==========================================================================
+   SCROLL SNAPPING POINTS - New!!  Cool! jQuery scrollnap detector included.
+   https://www.sitepoint.com/intuitive-scrolling-interfaces-with-css-scroll-snap-points/
+   Just give the container and scroll-sections their classes.
+/*SCROLL SNAP SYLES*/
+
+.scroll-container {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 400px;
+  scroll-snap-type: mandatory;
+  scroll-behavior: smooth;
+  background: #eee;
+  border: solid 1px #ccc;
+  font-size: 0px;
+  margin-bottom: 50px;
+}
+
+.scroll-container .scroll-section {
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  border: solid 1px #ccc;
+  white-space: nowrap;
+}
+/*Slider X (different sized images)*/
+
+.scroll-container.diff-size {
+  scroll-snap-destination: 50% 0%;
+  padding: 20px 0px;
+}
+
+.scroll-container.diff-size .scroll-section {
+  width: auto;
+  height: 100%;
+  margin-right: 15px;
+  scroll-snap-coordinate: 50% 0%;
+}
+
+.scroll-container.diff-size .scroll-section:first-child {
+  scroll-snap-coordinate: 0% 0%, 50% 0%;
+  margin-left: 15px;
+}
+
+.scroll-container.diff-size .scroll-section:last-child {
+  scroll-snap-coordinate: 50% 0%, 100% 0%;
+}
+
+/* ==========================================================================
+   SPINNER (css)  Edit or see others at: http://cssload.net/
+   ========================================================================== */
+
+#fountainTextG{
+    width:600px;
+    margin:auto;
+}
+
+.fountainTextG{
+    color:rgb(0,0,0);
+    font-family:Arial;
+    font-size:63px;
+    text-decoration:none;
+    font-weight:normal;
+    font-style:normal;
+    float:left;
+    animation-name:bounce_fountainTextG;
+        -o-animation-name:bounce_fountainTextG;
+        -ms-animation-name:bounce_fountainTextG;
+        -webkit-animation-name:bounce_fountainTextG;
+        -moz-animation-name:bounce_fountainTextG;
+    animation-duration:2.09s;
+        -o-animation-duration:2.09s;
+        -ms-animation-duration:2.09s;
+        -webkit-animation-duration:2.09s;
+        -moz-animation-duration:2.09s;
+    animation-iteration-count:infinite;
+        -o-animation-iteration-count:infinite;
+        -ms-animation-iteration-count:infinite;
+        -webkit-animation-iteration-count:infinite;
+        -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+        -o-animation-direction:normal;
+        -ms-animation-direction:normal;
+        -webkit-animation-direction:normal;
+        -moz-animation-direction:normal;
+    transform:scale(.5);
+        -o-transform:scale(.5);
+        -ms-transform:scale(.5);
+        -webkit-transform:scale(.5);
+        -moz-transform:scale(.5);
+}#fountainTextG_1{
+    animation-delay:0.75s;
+        -o-animation-delay:0.75s;
+        -ms-animation-delay:0.75s;
+        -webkit-animation-delay:0.75s;
+        -moz-animation-delay:0.75s;
+}
+#fountainTextG_2{
+    animation-delay:0.9s;
+        -o-animation-delay:0.9s;
+        -ms-animation-delay:0.9s;
+        -webkit-animation-delay:0.9s;
+        -moz-animation-delay:0.9s;
+}
+#fountainTextG_3{
+    animation-delay:1.05s;
+        -o-animation-delay:1.05s;
+        -ms-animation-delay:1.05s;
+        -webkit-animation-delay:1.05s;
+        -moz-animation-delay:1.05s;
+}
+#fountainTextG_4{
+    animation-delay:1.2s;
+        -o-animation-delay:1.2s;
+        -ms-animation-delay:1.2s;
+        -webkit-animation-delay:1.2s;
+        -moz-animation-delay:1.2s;
+}
+#fountainTextG_5{
+    animation-delay:1.35s;
+        -o-animation-delay:1.35s;
+        -ms-animation-delay:1.35s;
+        -webkit-animation-delay:1.35s;
+        -moz-animation-delay:1.35s;
+}
+#fountainTextG_6{
+    animation-delay:1.5s;
+        -o-animation-delay:1.5s;
+        -ms-animation-delay:1.5s;
+        -webkit-animation-delay:1.5s;
+        -moz-animation-delay:1.5s;
+}
+#fountainTextG_7{
+    animation-delay:1.64s;
+        -o-animation-delay:1.64s;
+        -ms-animation-delay:1.64s;
+        -webkit-animation-delay:1.64s;
+        -moz-animation-delay:1.64s;
+}
+
+
+
+
+@keyframes bounce_fountainTextG{
+    0%{
+        transform:scale(1);
+        color:rgb(0,0,0);
+    }
+
+    100%{
+        transform:scale(.5);
+        color:rgb(255,255,255);
+    }
+}
+
+@-o-keyframes bounce_fountainTextG{
+    0%{
+        -o-transform:scale(1);
+        color:rgb(0,0,0);
+    }
+
+    100%{
+        -o-transform:scale(.5);
+        color:rgb(255,255,255);
+    }
+}
+
+@-ms-keyframes bounce_fountainTextG{
+    0%{
+        -ms-transform:scale(1);
+        color:rgb(0,0,0);
+    }
+
+    100%{
+        -ms-transform:scale(.5);
+        color:rgb(255,255,255);
+    }
+}
+
+@-webkit-keyframes bounce_fountainTextG{
+    0%{
+        -webkit-transform:scale(1);
+        color:rgb(0,0,0);
+    }
+
+    100%{
+        -webkit-transform:scale(.5);
+        color:rgb(255,255,255);
+    }
+}
+
+@-moz-keyframes bounce_fountainTextG{
+    0%{
+        -moz-transform:scale(1);
+        color:rgb(0,0,0);
+    }
+
+    100%{
+        -moz-transform:scale(.5);
+        color:rgb(255,255,255);
+    }
+}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
